@@ -1,0 +1,37 @@
+# Don't upload compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore system or IDE files
+.vscode/
+.idea/
+*.swp
+
+# Git and version control
+.git/
+.gitignore
+
+# Environment files
+.venv/
+env/
+venv/
+*.env
+
+# Node modules (if any)
+node_modules/
+
+# Local DB files and build
+*.sqlite3
+build/
+dist/
+*.log
+
+# Flutter build and generated files (if this is a fullstack project)
+flutter/
+android/
+ios/
+windows/
+macos/
+linux/
