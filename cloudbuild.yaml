@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/street-light-464111/smartlight-backend', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/street-light-464111/smartlight-backend']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args: ['run', 'deploy', 'smartlight-backend', '--image', 'gcr.io/street-light-464111/smartlight-backend', '--region', 'asia-south1', '--platform', 'managed', '--allow-unauthenticated']
+
+images:
+  - gcr.io/street-light-464111/smartlight-backend
