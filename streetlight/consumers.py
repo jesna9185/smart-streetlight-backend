@@ -3,6 +3,7 @@ import json
 
 # consumers.py
 
+
 class LDRConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.channel_layer.group_add("ldr_group", self.channel_name)
